@@ -7,4 +7,8 @@ function solution(n) {
         }
         return numArr[n]; 
     }
+    // if (n === 0) return 0;
+    // if (n <= 2) return 1;
+    // let answer = (solution (n - 2) + solution (n - 1)) % 1234567
+    // return answer;
 }
