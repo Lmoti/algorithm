@@ -17,7 +17,6 @@ function solution(answers) {
         }
         correctNum.push(supojacounts[i]);
     }
-    console.log(correctNum);
     let maxCorrect = 0;
     for (let i = 0; i < 3; i++) {
         if (correctNum[i] !== 0 && correctNum[i] > maxCorrect) {
@@ -29,7 +28,6 @@ function solution(answers) {
             answer.push(correctNum.indexOf(Math.max(...correctNum)) + 1);
             correctNum.splice(correctNum.indexOf(Math.max(...correctNum)), 1, 0)
         }
-        console.log(answer);
     }
     return answer;
 }
