@@ -19,8 +19,7 @@ var findJudge = function(n, trust) {
     }
     for (let key in people) {
         if (people[key] === n - 1) {
-            let maybejudge = key;
-            if (trustPeople[maybejudge] === undefined) return key;
+            if (trustPeople[key] === undefined) return key;
         }
     }
     return -1;
