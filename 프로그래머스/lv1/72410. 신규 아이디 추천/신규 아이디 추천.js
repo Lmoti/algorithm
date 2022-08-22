@@ -5,7 +5,7 @@ function solution(new_id) {
     for (let i of word) {
         result += i.toLowerCase();
     }
-    const sp = result.split('')
+    let sp = result.split('')
     for (let i of result) {
         if (sw.includes(i)) {
             if (i !== '-' && i !== '_' && i !== '.') {
@@ -36,6 +36,7 @@ function solution(new_id) {
     }
     if (sp.length > 15) {
         sp.splice(15, sp.length - 15);
+        // sp = sp.slice(0, 15);
     }
     if (sp[sp.length - 1] === '.') {
         sp.splice(sp.length - 1, 1);
