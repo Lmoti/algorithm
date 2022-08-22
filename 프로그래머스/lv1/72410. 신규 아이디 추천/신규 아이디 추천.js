@@ -13,13 +13,6 @@ function solution(new_id) {
             }
         }
     }
-    // for (let i = 0; i < sp.length; i++) {
-    //     if (sp[i] === '.') {
-    //         while (sp[i + 1] !== '.') {
-    //             sp.splice(i + 1, 1);
-    //         }
-    //     }
-    // }
     let num = 0;
     while (true) {
         if (sp[num] === '.' && sp[num + 1] === '.') {
