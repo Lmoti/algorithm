@@ -36,7 +36,6 @@ function solution(N, stages) {
     
     for (let i = 0; i < stage.length; i++) {
         let failrate = (data[stage[i]]['challenge']) / (data[stage[i]]['challenge'] + data[stage[i]]['winner'])
-        console.log(failrate)
         data[stage[i]]['failrate'] = failrate
     }
     const dataArr = Object.entries(data)
