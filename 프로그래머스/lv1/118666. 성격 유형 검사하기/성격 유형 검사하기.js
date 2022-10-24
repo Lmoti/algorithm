@@ -11,7 +11,6 @@ function solution(survey, choices) {
         }
     }
     
-    console.log(score)
     for (let type of types) {
         score[type[0]] < score[type[1]] ? answer += type[1] : answer += type[0]
     }
