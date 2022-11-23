@@ -3,7 +3,6 @@ function solution(n, words) {
     let cycle = 1;
     const said = [words[0]];
     let breakGame = false;
-    if (words[0].length === 1) return [1, 1];
     for (let i = 1; i < words.length; i++) {
         count++;
         if (count % n === 1) {
