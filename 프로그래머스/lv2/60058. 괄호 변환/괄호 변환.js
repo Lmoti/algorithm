@@ -3,13 +3,13 @@ function solution(p) {
         let u = '';
         let v = '';
         for (let i = 0; i < p.length; i++) {
-            p[i] === '(' ? right++ : right--;
+            p[i] === '(' ? right++ : right--
             if (right < 0) break;
         }
         if (right === 0) return p;
         else right = 0;
         for (let i = 0; i < p.length; i++) {
-            p[i] === '(' ? right++ : right--;
+            p[i] === '(' ? right++ : right--
             if (right === 0) {
                 u = p.slice(0, i + 1);
                 v = p.slice(i + 1);
