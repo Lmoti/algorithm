@@ -3,6 +3,5 @@ function solution(numbers) {
     numbers.forEach((n) => {
         num += n;
     })
-    num /= numbers.length;
-    return Number.isInteger(num) ? Number(num + '.0') : num;
+    return num / numbers.length;
 }
