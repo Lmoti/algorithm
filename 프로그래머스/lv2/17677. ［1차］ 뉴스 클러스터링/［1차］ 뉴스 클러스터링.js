@@ -1,11 +1,9 @@
 function solution(str1, str2) {
-    let answer = 0;
     const eng = /^[a-zA-Z]*$/;
     const arr1 = [];
     const arr2 = [];
     let union = [];
     const intersect = [];
-    const idx = [];
     
     for (let i = 0; i < str1.length - 1; i++) {
         let j = str1[i] + str1[i + 1]
@@ -21,8 +19,6 @@ function solution(str1, str2) {
         if (arr2.includes(i)) {
             intersect.push(i);
             arr2.splice(arr2.indexOf(i), 1);
-            idx.push(arr1.indexOf(i));
-            
         }
     }
     
