@@ -7,8 +7,8 @@ function solution(n, arr1, arr2) {
             map[i].push(' ')
         }
     }
-    const arr11 = arr1.map((el) => ('0'.repeat(16) + el.toString(2)).slice(-n));
-    const arr22 = arr2.map((el) => ('0'.repeat(16) + el.toString(2)).slice(-n));
+    const arr11 = arr1.map((el) => ('0'.repeat(15) + el.toString(2)).slice(-n));
+    const arr22 = arr2.map((el) => ('0'.repeat(15) + el.toString(2)).slice(-n));
     for (let i = 0; i < n; i++) {
         const arr111 = arr11[i].split('');
         const arr222 = arr22[i].split('');
