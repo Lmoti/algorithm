@@ -21,6 +21,5 @@ function solution(files) {
         else if (a[1][0] > b[1][0]) return 1;
         else return a[1][1] - b[1][1]
     })
-    console.log(arr);
     return arr.map((el) => el[0]);
 }
