@@ -14,6 +14,5 @@ function solution (n) {
     
     arr[i] %= 1000000007;
     }
-    console.log(arr);
     return arr[n / 2];
 }
