@@ -39,10 +39,9 @@
 
 function solution(m, n, board) {
     let prev = -1
-    var answer = 0;
+    let answer = 0;
     board = board.map((el) => el.split(""))
-    let isVisited = Array.from({length: m}, () => new Array(n).fill(1))
-    let turn = 0
+    const isVisited = Array.from({length: m}, () => new Array(n).fill(1))
     
     while(prev !== answer) {
         prev = answer
