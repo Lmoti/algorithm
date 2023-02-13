@@ -1,12 +1,13 @@
 function solution(numbers) {
+    const answer = Array(numbers.length).fill(-1);
     let stack = [];
     for (let i = 0; i < numbers.length; i++) {
-        while(stack.length && numbers[stack.at(-1)] < numbers[i]) numbers[stack.pop()] = numbers[i];
+        while(stack.length && numbers[stack.at(-1)] < numbers[i]) answer[stack.pop()] = numbers[i];
         stack.push(i);
     }
     
     while (stack.length) {
-        numbers[stack.pop()] = -1;
+        answer[stack.pop()] = -1;
     }
-    return numbers;
+    return answer;
 }
