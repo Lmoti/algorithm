@@ -5,10 +5,10 @@ function solution(n, works) {
     while (n) {
         let max = works[0];
         for (let i = 0; i < works.length; i++) {
-            if (works[i] >= max) {
+            if (works[i] === max) {
                 works[i]--;
                 n--;
-            }
+            } else break;
             if (!n) break;
         }
     }
