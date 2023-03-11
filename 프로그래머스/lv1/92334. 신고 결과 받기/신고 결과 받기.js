@@ -1,28 +1,23 @@
 function solution(id_list, report, k) {
     const answer = [];
-    report = [...new Set(report)];
+    let reports = [...new Set(report)].map((el) => el.split(' '));
     const obj = {};
     const result = {};
     for (let id of id_list) {
         obj[id] = [];
     }
-    for (let i = 0; i < report.length; i++) {
-        const [a, b] = report[i].split(' ');
+    for (let report of reports) {
+        const [a, b] = report;
         obj[a].push(b);
-    }
-    const arr = Object.values(obj);
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[i].length; j++) {
-            result[arr[i][j]] = ++result[arr[i][j]] || 1;
-        }
+        result[b] = ++result[b] || 1;
     }
     for (let char in obj) {
         const tempArr = obj[char];
-        let temp = 0;
-        for (let i = 0; i < tempArr.length; i++) {
-            if (result[tempArr[i]] >= k) temp++;
+        let count = 0;
+        for (let temp of tempArr) {
+            if (result[temp] >= k) count++;
         }
-        answer.push(temp);
+        answer.push(count);
     }
     return answer;
 }
