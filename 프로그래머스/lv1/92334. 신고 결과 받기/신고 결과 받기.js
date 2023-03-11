@@ -1,5 +1,6 @@
 function solution(id_list, report, k) {
     const answer = [];
+    report = [...new Set(report)];
     const obj = {};
     const result = {};
     for (let id of id_list) {
@@ -7,7 +8,7 @@ function solution(id_list, report, k) {
     }
     for (let i = 0; i < report.length; i++) {
         const [a, b] = report[i].split(' ');
-        if (!obj[a].includes(b)) obj[a].push(b);
+        obj[a].push(b);
     }
     const arr = Object.values(obj);
     for (let i = 0; i < arr.length; i++) {
