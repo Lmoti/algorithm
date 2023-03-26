@@ -1,13 +1,12 @@
 function solution(wallpaper) {
-    let minx = wallpaper.length;
-    let miny = wallpaper[0].length;
-    let maxx = 0;
-    let maxy = 0;
+    let [minx, miny, maxx, maxy] = [wallpaper.length, wallpaper[0].length, 0, 0];
     for (let i = 0; i < wallpaper.length; i++) {
-        if (wallpaper[i].includes('#') && i < minx) minx = i;
-        if (wallpaper[i].indexOf('#') !== -1 && wallpaper[i].indexOf('#') < miny) miny = wallpaper[i].indexOf('#');
-        if (wallpaper[i].includes('#') && i >= maxx) maxx = i + 1;
-        if (wallpaper[i].lastIndexOf('#') !== -1 && wallpaper[i].lastIndexOf('#') >= maxy) maxy = wallpaper[i].lastIndexOf('#') + 1;
+        if (wallpaper[i].includes('#')) {
+            minx = Math.min(minx, i);
+            miny = Math.min(miny, wallpaper[i].indexOf('#'));
+            maxx = Math.max(maxx, i);
+            maxy = Math.max(maxy, wallpaper[i].lastIndexOf('#'));
+        }
     }
-    return [minx, miny, maxx, maxy];
+    return [minx, miny, maxx + 1, maxy + 1];
 }
