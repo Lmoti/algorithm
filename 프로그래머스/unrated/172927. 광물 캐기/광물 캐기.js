@@ -1,8 +1,7 @@
 function solution(picks, minerals) {
     let answer = 0;
     const totalPick = picks.reduce((a, b) => a + b, 0);
-    const num = Math.floor(minerals.length / 5);
-    let arr = [];
+    const arr = [];
     for (let i = 0; i < totalPick; i++) {
         arr.push(minerals.slice(i * 5, (i + 1) * 5));
     }
