@@ -3,11 +3,10 @@ function solution(picks, minerals) {
     const totalPick = picks.reduce((a, b) => a + b, 0);
     const num = Math.floor(minerals.length / 5);
     let arr = [];
-    for (let i = 0; i < num; i++) {
+    for (let i = 0; i < totalPick; i++) {
         arr.push(minerals.slice(i * 5, (i + 1) * 5));
     }
-    arr.push(minerals.slice(num * 5));
-    arr = arr.slice(0, totalPick).sort((a, b) => {
+    arr.sort((a, b) => {
         const adia = a.filter((el) => el === 'diamond').length;
         const bdia = b.filter((el) => el === 'diamond').length;
         const airon = a.filter((el) => el === 'iron').length;
