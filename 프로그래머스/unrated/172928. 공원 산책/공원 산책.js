@@ -1,6 +1,5 @@
 function solution(park, routes) {
-    routes = routes.map((el) => el.split(' '));
-    routes = routes.map((el) => [el[0], +el[1]]);
+    routes = routes.map((el) => el.split(' ')).map((el) => [el[0], +el[1]]);
     const [maxx, maxy] = [park[0].length, park.length];
     let [curx, cury] = [0, 0];
     const obs = [];
